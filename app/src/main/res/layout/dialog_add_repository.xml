@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog"
+    android:clickable="false"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:background="@color/colorPrimary"
+
+        >
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:contentInsetLeft="0dp"
+            android:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:contentInsetStart="0dp"
+            app:collapseIcon="@drawable/ic_arrow_back"
+            >
+            <android.support.v7.widget.SearchView
+                android:id="@+id/search_repository"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:queryHint="Nome do repositório"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                android:queryBackground="@android:color/transparent"
+                />
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/card_repository_view"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
